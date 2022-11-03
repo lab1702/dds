@@ -1,6 +1,4 @@
-#!/bin/sh
-
-docker-compose down
+docker-compose pull
 docker system prune -f
 docker system prune -f
 docker system prune -f
