@@ -6,8 +6,8 @@ services:
     restart: unless-stopped
     container_name: jupyterlab
     volumes:
-      - "~/MEGAsync/R/Rcode:/home/jovyan/Rcode"
-      - "~/MEGAsync/PythonProjects:/home/jovyan/work"
+      - "~/MEGAsync/Rcode:/home/jovyan/Rcode"
+      - "~/MEGAsync/PythonCode:/home/jovyan/PythonCode"
     ports:
       - "127.0.0.1:8888:8888"
     command: start.sh jupyter lab --ServerApp.token=''
@@ -16,7 +16,8 @@ services:
     restart: unless-stopped
     container_name: rstudio
     volumes:
-      - "~/MEGAsync/R/Rcode:/home/rstudio/Rcode"
+      - "~/MEGAsync/Rcode:/home/rstudio/Rcode"
+      - "~/MEGAsync/PythonCode:/home/rstudio/PythonCode"
     ports:
       - "127.0.0.1:8787:8787"
     environment:
