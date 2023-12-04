@@ -8,6 +8,10 @@ Clone:
     git clone https://github.com/lab1702/dds.git
     cd dds
 
+To update images:
+
+    docker-compose pull
+
 To start:
 
     docker-compose up -d
