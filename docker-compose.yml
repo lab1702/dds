@@ -1,0 +1,24 @@
+---
+version: '3'
+services:
+  jupyter:
+    image: quay.io/jupyter/datascience-notebook
+    restart: unless-stopped
+    container_name: jupyter
+    volumes:
+      - "~/MEGAsync/Rcode:/home/jovyan/Rcode"
+      - "~/MEGAsync/PythonCode:/home/jovyan/PythonCode"
+    ports:
+      - "127.0.0.1:8888:8888"
+    command: start.sh jupyter lab --ServerApp.token=''
+  rstudio:
+    image: docker.io/rocker/geospatial
+    restart: unless-stopped
+    container_name: rstudio
+    volumes:
+      - "~/MEGAsync/Rcode:/home/rstudio/Rcode"
+      - "~/MEGAsync/PythonCode:/home/rstudio/PythonCode"
+    ports:
+      - "127.0.0.1:8787:8787"
+    environment:
+      - DISABLE_AUTH=true
