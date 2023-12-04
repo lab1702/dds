@@ -6,7 +6,6 @@ where you can access them only via localhost.***
 Clone:
 
     git clone https://github.com/lab1702/dds.git
-    cd dds
 
 To update images:
 
