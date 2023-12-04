@@ -27,3 +27,6 @@ To stop:
 
     docker-compose down
 
+To clean up unused images:
+
+    docker prune -f
