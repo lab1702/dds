@@ -29,4 +29,4 @@ To stop:
 
 To clean up unused images:
 
-    docker prune -f
+    docker system prune -f
