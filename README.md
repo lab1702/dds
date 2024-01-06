@@ -9,22 +9,22 @@ Clone:
 
 To update images:
 
-    docker-compose pull
+    docker compose pull
 
 To start:
 
-    docker-compose up -d
+    docker compose up -d
 
 Then access JupyterLab at: [http://localhost:8888/](http://localhost:8888/)
 and RStudio at: [http://localhost:8787/](http://localhost:8787/).
 
 To watch logs:
 
-    docker-compose logs -f
+    docker compose logs -f
 
 To stop:
 
-    docker-compose down
+    docker compose down
 
 To clean up unused images:
 
