@@ -16,7 +16,6 @@ To start:
     docker compose up -d
 
 Then access JupyterLab at: [http://localhost:8888/](http://localhost:8888/)
-and RStudio at: [http://localhost:8787/](http://localhost:8787/).
 
 To watch logs:
 
