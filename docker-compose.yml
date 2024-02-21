@@ -6,8 +6,8 @@ services:
     restart: unless-stopped
     container_name: jupyter
     volumes:
-      - "~/MEGAsync/Rcode:/home/jovyan/Rcode"
-      - "~/MEGAsync/PythonCode:/home/jovyan/PythonCode"
+      - "~/MEGA/Rcode:/home/jovyan/Rcode"
+      - "~/MEGA/PythonCode:/home/jovyan/PythonCode"
     ports:
       - "127.0.0.1:8888:8888"
     command: start.sh jupyter lab --ServerApp.token=''
