@@ -6,8 +6,17 @@ services:
     restart: unless-stopped
     container_name: jupyter
     volumes:
-      - "~/MEGA/Rcode:/home/jovyan/Rcode"
-      - "~/MEGA/PythonCode:/home/jovyan/PythonCode"
+      - "~/MEGA:/home/jovyan/MEGA"
     ports:
       - "127.0.0.1:8888:8888"
     command: start.sh jupyter lab --ServerApp.token=''
+  rstudio:
+    image: docker.io/rocker/geospatial
+    restart: unless-stopped
+    container_name: rstudio
+    volumes:
+      - "~/MEGA:/home/rstudio/MEGA"
+    ports:
+      - "127.0.0.1:8787:8787"
+    environment:
+      - DISABLE_AUTH=true
