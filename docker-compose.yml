@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     container_name: jupyter
     volumes:
-      - "MEGA:/home/jovyan/MEGA"
+      - "~/Rcode:/home/jovyan/Rcode"
     ports:
       - "127.0.0.1:8888:8888"
     command: start.sh jupyter lab --ServerApp.token=''
@@ -15,7 +15,8 @@ services:
     restart: unless-stopped
     container_name: rstudio
     volumes:
-      - "MEGA:/home/rstudio/MEGA"
+      - "~/Rcode:/home/rstudio/Rcode"
+      - "~/ShinyApps:/srv/shiny-server"
     ports:
       - "127.0.0.1:8787:8787"
     environment:
@@ -24,5 +25,7 @@ services:
     image: docker.io/rocker/shiny-verse
     restart: unless-stopped
     container_name: shiny
+    volumes:
+      - "~/ShinyApps:/srv/shiny-server"
     ports:
       - "127.0.0.1:3838:3838"
